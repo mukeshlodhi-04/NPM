@@ -9,7 +9,7 @@ import Temples from './pages/Temples';
 import Blogs from './pages/Blogs';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import CreateBlog from './pages/CreateBlog';
+
 
 const App = () => {
   return (
@@ -23,7 +23,6 @@ const App = () => {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/create-blog" element={<CreateBlog />} />
       </Routes>
       <Footer />
     </Router>

@@ -2,12 +2,34 @@ const express = require('express');
 const router = express.Router();
 const Blog = require('../models/blog');
 const auth = require('../middleware/auth');
+const multer = require('multer');
+const path = require('path');
 
-// Create Blog
-router.post('/', auth, async (req, res) => {
-  const { title, content } = req.body;
+// Configure multer for image uploads
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'uploads/');
+  },
+  filename: (req, file, cb) => {
+    cb(null, Date.now() + path.extname(file.originalname));
+  }
+});
+
+const upload = multer({ storage });
+
+// Create Blog with image upload
+router.post('/', auth, upload.single('image'), async (req, res) => {
   try {
-    const blog = new Blog({ title, content, author: req.userId });
+    const { title, description } = req.body;
+    const image = req.file.filename; // Store the filename
+    
+    const blog = new Blog({
+      title,
+      description,
+      image,
+      author: req.userId
+    });
+
     await blog.save();
     res.status(201).json(blog);
   } catch (err) {
@@ -15,7 +37,7 @@ router.post('/', auth, async (req, res) => {
   }
 });
 
-// Get Blogs
+// Get all blogs with author details
 router.get('/', async (req, res) => {
   try {
     const blogs = await Blog.find().populate('author', 'username');
@@ -25,19 +47,22 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Edit Blog
-router.put('/:id', auth, async (req, res) => {
-  const { title, content } = req.body;
+// Update blog
+router.put('/:id', auth, upload.single('image'), async (req, res) => {
   try {
     const blog = await Blog.findById(req.params.id);
     if (!blog) return res.status(404).json({ message: 'Blog not found' });
 
     if (blog.author.toString() !== req.userId) {
-      return res.status(403).json({ message: 'You are not authorized to edit this blog' });
+      return res.status(403).json({ message: 'Unauthorized' });
     }
 
-    blog.title = title;
-    blog.content = content;
+    blog.title = req.body.title || blog.title;
+    blog.description = req.body.description || blog.description;
+    if (req.file) {
+      blog.image = req.file.filename;
+    }
+
     await blog.save();
     res.json(blog);
   } catch (err) {
@@ -45,14 +70,14 @@ router.put('/:id', auth, async (req, res) => {
   }
 });
 
-// Delete Blog
+// Delete blog
 router.delete('/:id', auth, async (req, res) => {
   try {
     const blog = await Blog.findById(req.params.id);
     if (!blog) return res.status(404).json({ message: 'Blog not found' });
 
     if (blog.author.toString() !== req.userId) {
-      return res.status(403).json({ message: 'You are not authorized to delete this blog' });
+      return res.status(403).json({ message: 'Unauthorized' });
     }
 
     await blog.remove();
