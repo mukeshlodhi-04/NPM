@@ -16,7 +16,16 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage });
-
+// Add this to your blog routes
+router.get('/:id', async (req, res) => {
+  try {
+    const blog = await Blog.findById(req.params.id).populate('author', 'username');
+    if (!blog) return res.status(404).json({ message: 'Blog not found' });
+    res.json(blog);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
 // Create Blog with image upload
 router.post('/', auth, upload.single('image'), async (req, res) => {
   try {
@@ -71,20 +80,28 @@ router.put('/:id', auth, upload.single('image'), async (req, res) => {
 });
 
 // Delete blog
+// Delete blog - Updated version
 router.delete('/:id', auth, async (req, res) => {
   try {
     const blog = await Blog.findById(req.params.id);
-    if (!blog) return res.status(404).json({ message: 'Blog not found' });
+    if (!blog) {
+      return res.status(404).json({ message: 'Blog not found' });
+    }
 
     if (blog.author.toString() !== req.userId) {
       return res.status(403).json({ message: 'Unauthorized' });
     }
 
-    await blog.remove();
+    // Use deleteOne() instead of remove()
+    await Blog.deleteOne({ _id: req.params.id });
+    
     res.json({ message: 'Blog deleted successfully' });
   } catch (err) {
-    res.status(500).json({ message: err.message });
+    console.error('Delete error:', err);
+    res.status(500).json({ 
+      message: 'Error deleting blog',
+      error: process.env.NODE_ENV === 'development' ? err.message : undefined
+    });
   }
 });
-
 module.exports = router;

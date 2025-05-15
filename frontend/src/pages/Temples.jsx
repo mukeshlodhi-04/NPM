@@ -259,7 +259,7 @@ const NarmadaTemples = () => {
       </header>
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-4">
         {!selectedTemple ? (
           <>
             {/* State Selector */}

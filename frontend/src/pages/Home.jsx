@@ -86,7 +86,7 @@ const Home = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              to="/explore" 
+              to="/route" 
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-medium transition duration-300 flex items-center justify-center gap-2"
             >
               Begin Journey <FiArrowRight />
