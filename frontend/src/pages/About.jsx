@@ -13,6 +13,9 @@ import {
 } from 'react-icons/fa';
 import { GiRiver, GiStonePath } from 'react-icons/gi';
 import { MdCelebration } from 'react-icons/md';
+import nkund from '../assets/naramdaKund.jpg';
+import njayanti from '../assets/njayanti.jpg';
+import SSdam from '../assets/SardarSarovarDam.jpg';
 
 const About = () => {
   const fadeIn = {
@@ -78,7 +81,7 @@ const About = () => {
           </div>
           <div className="lg:w-1/2">
             <img 
-              src="/narmada-origin.jpg" 
+              src={nkund} 
               alt="Narmada Origin at Amarkantak" 
               className="rounded-xl shadow-lg w-full"
             />
@@ -200,7 +203,7 @@ const About = () => {
           </div>
           <div className="lg:w-1/2">
             <img 
-              src="/narmada-jayanti.jpg" 
+              src={njayanti} 
               alt="Narmada Jayanti Celebrations" 
               className="rounded-xl shadow-lg w-full"
             />
@@ -301,7 +304,7 @@ const About = () => {
           >
             <div className="md:w-1/2">
               <img 
-                src="/narmada-dam.jpg" 
+                src={SSdam}
                 alt="Sardar Sarovar Dam" 
                 className="rounded-lg w-full"
               />

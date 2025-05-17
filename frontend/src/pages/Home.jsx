@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowRight, FiMap, FiCamera, FiBookOpen, FiUsers } from 'react-icons/fi';
 
-
+import poster from '../assets/poster.jpg';
+import map1 from '../assets/map1.png';
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -72,7 +73,7 @@ const Home = () => {
           muted 
           playsInline 
           className="absolute w-full h-full object-cover"
-          poster="/narmada-poster.jpg"
+          poster={poster}
         >
           <source src="/narmada-river.mp4" type="video/mp4" />
         </video>
@@ -152,16 +153,16 @@ const Home = () => {
               </Link>
             </div>
             <div className="lg:w-1/2">
-              <div className="relative rounded-xl overflow-hidden shadow-xl">
+              <div className="relative  overflow-hidden shadow-xl">
                 <img 
-                  src="/narmada-map.jpg" 
+                  src={map1}
                   alt="Narmada Parikrama Route" 
-                  className="w-full h-auto"
+                  //className="w-full h-full"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-6">
+                <div className="absolute inset-0  flex items-end p-6">
                   <div>
-                    <h3 className="text-white text-xl font-semibold">Interactive Parikrama Map</h3>
-                    <p className="text-blue-200">Explore the complete route with key stops</p>
+                    <h3 className="text-white text-xl font-semibold"></h3>
+                    <p className="text-blue-200"></p>
                   </div>
                 </div>
               </div>
@@ -260,9 +261,6 @@ const Home = () => {
               <p>+91 98765 43210</p>
             </address>
           </div>
-        </div>
-        <div className="max-w-6xl mx-auto pt-8 mt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Narmada Yatra Project. All rights reserved.</p>
         </div>
       </footer>
     </div>
