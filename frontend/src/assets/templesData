@@ -1,0 +1,481 @@
+const templesData = {
+    madhayapradesh: {
+      districts: {
+        'all': {
+          name: 'All Districts',
+          temples: [
+            {
+              id: 1,
+              name: 'Narmada Udgam Temple, Amarkantak',
+              district: 'Anuppur',
+              image: 'https://source.unsplash.com/random/600x400/?amarkantak,temple',
+              history: 'The origin point of the Narmada River, this temple marks where the sacred river emerges from the earth. The current structure was built by the Kalachuri dynasty in the 11th century.',
+              significance: 'Most sacred point of the Narmada where pilgrims begin their journey. The temple complex includes shrines to Lord Shiva and other deities.',
+              architecture: 'Built in Nagara style with intricate carvings depicting scenes from Hindu scriptures.',
+              builtBy: 'Kalachuri kings with later additions by various rulers including the Marathas',
+              mapLink: 'https://goo.gl/maps/XYZ123'
+            },
+            {
+              id: 2,
+              name: 'Shri Lodheshwar Mahadev Temple, Shahpura',
+              district: 'Dindori',
+              image: 'https://source.unsplash.com/random/600x400/?shiva,temple',
+              history: 'Ancient Shiva temple mentioned in local folklore as being established by the Pandavas during their exile.',
+              significance: 'Important pilgrimage site for Shiva devotees in the region, known for its natural lingam formation.',
+              architecture: 'Simple stone structure with traditional tribal influences in its design.',
+              builtBy: 'Unknown ancient builders, maintained by local communities',
+              mapLink: 'https://goo.gl/maps/XYZ124'
+            },
+            {
+              id: 3,
+              name: 'Ramnagar Mandir',
+              district: 'Mandla',
+              image: 'https://source.unsplash.com/random/600x400/?ram,temple',
+              history: 'Riverside temple dating back to the Gondwana period, later renovated by the Marathas.',
+              significance: 'Peaceful worship site with beautiful views of the Narmada, popular for meditation.',
+              architecture: 'Mix of Gond and Maratha architectural styles with open pavilions.',
+              builtBy: 'Gond kings with Maratha period renovations',
+              mapLink: 'https://goo.gl/maps/XYZ125'
+            },
+            {
+              id: 4,
+              name: 'Gwari Ghat Narmada Temple',
+              district: 'Jabalpur',
+              image: 'https://source.unsplash.com/random/600x400/?ghat,river',
+              history: 'Historic ghat complex developed during the reign of the Kalachuri dynasty, expanded by the British.',
+              significance: 'Famous for its evening aarti ceremony and marble rock views. Considered highly auspicious for rituals.',
+              architecture: 'Colonial-era ghats with Hindu temple structures in traditional style.',
+              builtBy: 'Kalachuri kings with British period additions',
+              mapLink: 'https://goo.gl/maps/XYZ126'
+            },
+            {
+              id: 5,
+              name: 'Barman Ghat Temple',
+              district: 'Narsinghpur',
+              image: 'https://source.unsplash.com/random/600x400/?confluence,river',
+              history: 'Ancient temple at the scenic confluence of Narmada and Warahi rivers, dating back to the Paramara period.',
+              significance: 'Sacred sangam (confluence) site where special rituals are performed during eclipses.',
+              architecture: 'Paramara-style temple with intricate stone carvings of deities.',
+              builtBy: 'Paramara dynasty rulers',
+              mapLink: 'https://goo.gl/maps/XYZ127'
+            },
+            {
+              id: 6,
+              name: 'Siddhanath Temple, Nemawar',
+              district: 'Harda',
+              image: 'https://source.unsplash.com/random/600x400/?ancient,temple',
+              history: '10th-century Lord Shiva temple built during the Paramara rule, showcasing exquisite craftsmanship.',
+              significance: 'Known for its unique architectural style and spiritual energy. The Shiva lingam here is naturally formed.',
+              architecture: 'Classic Paramara-style with intricate carvings and a pyramidal shikhara.',
+              builtBy: 'Paramara dynasty artisans',
+              mapLink: 'https://goo.gl/maps/XYZ128'
+            },
+            {
+              id: 7,
+              name: 'Narmada Mandir, Sethani Ghat',
+              district: 'Hoshangabad',
+              image: 'https://source.unsplash.com/random/600x400/?ghat,temple',
+              history: 'Built by the wealthy Sethani family in the 19th century, this ghat temple has become a landmark.',
+              significance: 'One of the most beautiful ghats on the Narmada, famous for its sunrise views and peaceful atmosphere.',
+              architecture: 'Maratha-style temple with wide stone steps leading to the river.',
+              builtBy: 'Sethani family of Hoshangabad',
+              mapLink: 'https://goo.gl/maps/XYZ129'
+            },
+            {
+              id: 8,
+              name: 'Baglamukhi Temple, Nalkheda',
+              district: 'Dewas',
+              image: 'https://source.unsplash.com/random/600x400/?tantra,temple',
+              history: 'Ancient temple dedicated to Goddess Baglamukhi, associated with tantric worship practices.',
+              significance: 'Powerful Shakti Peetha where devotees seek protection from enemies and negative forces.',
+              architecture: 'Unique circular design with yantras carved into the walls.',
+              builtBy: 'Unknown ancient builders, maintained by tantric practitioners',
+              mapLink: 'https://goo.gl/maps/XYZ130'
+            },
+            {
+              id: 9,
+              name: 'Narmada Ghat Temple, Bareli',
+              district: 'Raisen',
+              image: 'https://source.unsplash.com/random/600x400/?river,temple',
+              history: 'Centuries-old riverside temple that became prominent during the Maratha rule.',
+              significance: 'Popular pilgrimage site during Narmada Jayanti celebrations with special rituals.',
+              architecture: 'Simple yet elegant stone structure with carved pillars.',
+              builtBy: 'Maratha period builders',
+              mapLink: 'https://goo.gl/maps/XYZ131'
+            },
+            {
+              id: 10,
+              name: 'Bhojpur Shiva Temple',
+              district: 'Sehore',
+              image: 'https://source.unsplash.com/random/600x400/?shiva,lingam',
+              history: 'Incomplete but massive ancient Shiva temple built by the legendary king Raja Bhoj in the 11th century.',
+              significance: 'Houses one of the largest Shiva lingams in India, carved from a single rock.',
+              architecture: 'Unfinished structure showcasing Paramara architectural techniques.',
+              builtBy: 'Raja Bhoj of the Paramara dynasty',
+              mapLink: 'https://goo.gl/maps/XYZ132'
+            },
+            {
+              id: 11,
+              name: 'Omkareshwar Jyotirlinga',
+              district: 'Khandwa',
+              image: 'https://source.unsplash.com/random/600x400/?jyotirlinga,temple',
+              history: 'One of the 12 sacred Jyotirlingas of Lord Shiva, mentioned in ancient Hindu scriptures dating back millennia.',
+              significance: 'Extremely sacred site where the natural lingam is worshipped as a manifestation of Shiva himself.',
+              architecture: 'Classic Nagara style temple complex on an island shaped like Om.',
+              builtBy: 'Various dynasties including Paramaras and Marathas',
+              mapLink: 'https://goo.gl/maps/XYZ133'
+            },
+            {
+              id: 12,
+              name: 'Ahilyeshwar Temple, Maheshwar',
+              district: 'Khargone',
+              image: 'https://source.unsplash.com/random/600x400/?maheshwar,temple',
+              history: 'Built by the revered queen Ahilyabai Holkar in the 18th century as part of her temple-building spree.',
+              significance: 'Beautifully carved riverside temple that exemplifies Maratha temple architecture.',
+              architecture: 'Maratha-style with intricate stone carvings and a golden kalasha.',
+              builtBy: 'Rani Ahilyabai Holkar of the Holkar dynasty',
+              mapLink: 'https://goo.gl/maps/XYZ134'
+            },
+            {
+              id: 13,
+              name: 'Narmada Temple, Dhamnod',
+              district: 'Dhar',
+              image: 'https://source.unsplash.com/random/600x400/?narmada,temple',
+              history: 'Ancient temple at the confluence of Narmada and other tributaries, dating to the Parmar period.',
+              significance: 'Sacred site where the river takes a unique turn, considered highly auspicious for rituals.',
+              architecture: 'Mix of Paramara and later Maratha architectural elements.',
+              builtBy: 'Paramara kings with later Holkar additions',
+              mapLink: 'https://goo.gl/maps/XYZ135'
+            },
+            {
+              id: 14,
+              name: 'Rameshwar Temple, Rajghat',
+              district: 'Barwani',
+              image: 'https://source.unsplash.com/random/600x400/?shiva,river',
+              history: 'Picturesque riverside temple established by local rulers as a spiritual retreat.',
+              significance: 'Known for its peaceful setting and beautiful sunsets over the Narmada.',
+              architecture: 'Simple stone structure blending with the natural surroundings.',
+              builtBy: 'Local Rajput rulers',
+              mapLink: 'https://goo.gl/maps/XYZ136'
+            },
+            {
+              id: 15,
+              name: 'Katthiwara Mahadev Temple',
+              district: 'Alirajpur',
+              image: 'https://source.unsplash.com/random/600x400/?village,temple',
+              history: 'Ancient rural Shiva temple serving tribal communities for generations.',
+              significance: 'Important local pilgrimage site where traditional tribal rituals are performed.',
+              architecture: 'Simple structure reflecting local tribal building techniques.',
+              builtBy: 'Bhil tribal communities',
+              mapLink: 'https://goo.gl/maps/XYZ137'
+            }
+          ]
+        },
+        'Anuppur': {
+          name: 'Anuppur',
+          temples: [
+            {
+              id: 1,
+              name: 'Narmada Udgam Temple, Amarkantak',
+              district: 'Anuppur',
+              image: 'https://source.unsplash.com/random/600x400/?amarkantak,temple',
+              history: 'The origin point of the Narmada River, this temple marks where the sacred river emerges from the earth. The current structure was built by the Kalachuri dynasty in the 11th century.',
+              significance: 'Most sacred point of the Narmada where pilgrims begin their journey. The temple complex includes shrines to Lord Shiva and other deities.',
+              architecture: 'Built in Nagara style with intricate carvings depicting scenes from Hindu scriptures.',
+              builtBy: 'Kalachuri kings with later additions by various rulers including the Marathas',
+              mapLink: 'https://goo.gl/maps/XYZ123'
+            }
+          ]
+        },
+        'Dindori': {
+          name: 'Dindori',
+          temples: [
+            {
+              id: 2,
+              name: 'Shri Lodheshwar Mahadev Temple, Shahpura',
+              district: 'Dindori',
+              image: 'https://source.unsplash.com/random/600x400/?shiva,temple',
+              history: 'Ancient Shiva temple mentioned in local folklore as being established by the Pandavas during their exile.',
+              significance: 'Important pilgrimage site for Shiva devotees in the region, known for its natural lingam formation.',
+              architecture: 'Simple stone structure with traditional tribal influences in its design.',
+              builtBy: 'Unknown ancient builders, maintained by local communities',
+              mapLink: 'https://goo.gl/maps/XYZ124'
+            }
+          ]
+        },
+        'Mandla': {
+          name: 'Mandla',
+          temples: [
+            {
+              id: 3,
+              name: 'Ramnagar Mandir',
+              district: 'Mandla',
+              image: 'https://source.unsplash.com/random/600x400/?ram,temple',
+              history: 'Riverside temple dating back to the Gondwana period, later renovated by the Marathas.',
+              significance: 'Peaceful worship site with beautiful views of the Narmada, popular for meditation.',
+              architecture: 'Mix of Gond and Maratha architectural styles with open pavilions.',
+              builtBy: 'Gond kings with Maratha period renovations',
+              mapLink: 'https://goo.gl/maps/XYZ125'
+            }
+          ]
+        },
+        'Jabalpur': {
+          name: 'Jabalpur',
+          temples: [
+            {
+              id: 4,
+              name: 'Gwari Ghat Narmada Temple',
+              district: 'Jabalpur',
+              image: 'https://source.unsplash.com/random/600x400/?ghat,river',
+              history: 'Historic ghat complex developed during the reign of the Kalachuri dynasty, expanded by the British.',
+              significance: 'Famous for its evening aarti ceremony and marble rock views. Considered highly auspicious for rituals.',
+              architecture: 'Colonial-era ghats with Hindu temple structures in traditional style.',
+              builtBy: 'Kalachuri kings with British period additions',
+              mapLink: 'https://goo.gl/maps/XYZ126'
+            }
+          ]
+        },
+        'Narsinghpur': {
+          name: 'Narsinghpur',
+          temples: [
+            {
+              id: 5,
+              name: 'Barman Ghat Temple',
+              district: 'Narsinghpur',
+              image: 'https://source.unsplash.com/random/600x400/?confluence,river',
+              history: 'Ancient temple at the scenic confluence of Narmada and Warahi rivers, dating back to the Paramara period.',
+              significance: 'Sacred sangam (confluence) site where special rituals are performed during eclipses.',
+              architecture: 'Paramara-style temple with intricate stone carvings of deities.',
+              builtBy: 'Paramara dynasty rulers',
+              mapLink: 'https://goo.gl/maps/XYZ127'
+            }
+          ]
+        },
+        'Harda': {
+          name: 'Harda',
+          temples: [
+            {
+              id: 6,
+              name: 'Siddhanath Temple, Nemawar',
+              district: 'Harda',
+              image: 'https://source.unsplash.com/random/600x400/?ancient,temple',
+              history: '10th-century Lord Shiva temple built during the Paramara rule, showcasing exquisite craftsmanship.',
+              significance: 'Known for its unique architectural style and spiritual energy. The Shiva lingam here is naturally formed.',
+              architecture: 'Classic Paramara-style with intricate carvings and a pyramidal shikhara.',
+              builtBy: 'Paramara dynasty artisans',
+              mapLink: 'https://goo.gl/maps/XYZ128'
+            }
+          ]
+        },
+        'Hoshangabad': {
+          name: 'Hoshangabad',
+          temples: [
+            {
+              id: 7,
+              name: 'Narmada Mandir, Sethani Ghat',
+              district: 'Hoshangabad',
+              image: 'https://source.unsplash.com/random/600x400/?ghat,temple',
+              history: 'Built by the wealthy Sethani family in the 19th century, this ghat temple has become a landmark.',
+              significance: 'One of the most beautiful ghats on the Narmada, famous for its sunrise views and peaceful atmosphere.',
+              architecture: 'Maratha-style temple with wide stone steps leading to the river.',
+              builtBy: 'Sethani family of Hoshangabad',
+              mapLink: 'https://goo.gl/maps/XYZ129'
+            }
+          ]
+        },
+        'Dewas': {
+          name: 'Dewas',
+          temples: [
+            {
+              id: 8,
+              name: 'Baglamukhi Temple, Nalkheda',
+              district: 'Dewas',
+              image: 'https://source.unsplash.com/random/600x400/?tantra,temple',
+              history: 'Ancient temple dedicated to Goddess Baglamukhi, associated with tantric worship practices.',
+              significance: 'Powerful Shakti Peetha where devotees seek protection from enemies and negative forces.',
+              architecture: 'Unique circular design with yantras carved into the walls.',
+              builtBy: 'Unknown ancient builders, maintained by tantric practitioners',
+              mapLink: 'https://goo.gl/maps/XYZ130'
+            }
+          ]
+        },
+        'Raisen': {
+          name: 'Raisen',
+          temples: [
+            {
+              id: 9,
+              name: 'Narmada Ghat Temple, Bareli',
+              district: 'Raisen',
+              image: 'https://source.unsplash.com/random/600x400/?river,temple',
+              history: 'Centuries-old riverside temple that became prominent during the Maratha rule.',
+              significance: 'Popular pilgrimage site during Narmada Jayanti celebrations with special rituals.',
+              architecture: 'Simple yet elegant stone structure with carved pillars.',
+              builtBy: 'Maratha period builders',
+              mapLink: 'https://goo.gl/maps/XYZ131'
+            }
+          ]
+        },
+        'Sehore': {
+          name: 'Sehore',
+          temples: [
+            {
+              id: 10,
+              name: 'Bhojpur Shiva Temple',
+              district: 'Sehore',
+              image: 'https://source.unsplash.com/random/600x400/?shiva,lingam',
+              history: 'Incomplete but massive ancient Shiva temple built by the legendary king Raja Bhoj in the 11th century.',
+              significance: 'Houses one of the largest Shiva lingams in India, carved from a single rock.',
+              architecture: 'Unfinished structure showcasing Paramara architectural techniques.',
+              builtBy: 'Raja Bhoj of the Paramara dynasty',
+              mapLink: 'https://goo.gl/maps/XYZ132'
+            }
+          ]
+        },
+        'Khandwa': {
+          name: 'Khandwa',
+          temples: [
+            {
+              id: 11,
+              name: 'Omkareshwar Jyotirlinga',
+              district: 'Khandwa',
+              image: 'https://source.unsplash.com/random/600x400/?jyotirlinga,temple',
+              history: 'One of the 12 sacred Jyotirlingas of Lord Shiva, mentioned in ancient Hindu scriptures dating back millennia.',
+              significance: 'Extremely sacred site where the natural lingam is worshipped as a manifestation of Shiva himself.',
+              architecture: 'Classic Nagara style temple complex on an island shaped like Om.',
+              builtBy: 'Various dynasties including Paramaras and Marathas',
+              mapLink: 'https://goo.gl/maps/XYZ133'
+            }
+          ]
+        },
+        'Khargone': {
+          name: 'Khargone',
+          temples: [
+            {
+              id: 12,
+              name: 'Ahilyeshwar Temple, Maheshwar',
+              district: 'Khargone',
+              image: 'https://source.unsplash.com/random/600x400/?maheshwar,temple',
+              history: 'Built by the revered queen Ahilyabai Holkar in the 18th century as part of her temple-building spree.',
+              significance: 'Beautifully carved riverside temple that exemplifies Maratha temple architecture.',
+              architecture: 'Maratha-style with intricate stone carvings and a golden kalasha.',
+              builtBy: 'Rani Ahilyabai Holkar of the Holkar dynasty',
+              mapLink: 'https://goo.gl/maps/XYZ134'
+            }
+          ]
+        },
+        'Dhar': {
+          name: 'Dhar',
+          temples: [
+            {
+              id: 13,
+              name: 'Narmada Temple, Dhamnod',
+              district: 'Dhar',
+              image: 'https://source.unsplash.com/random/600x400/?narmada,temple',
+              history: 'Ancient temple at the confluence of Narmada and other tributaries, dating to the Parmar period.',
+              significance: 'Sacred site where the river takes a unique turn, considered highly auspicious for rituals.',
+              architecture: 'Mix of Paramara and later Maratha architectural elements.',
+              builtBy: 'Paramara kings with later Holkar additions',
+              mapLink: 'https://goo.gl/maps/XYZ135'
+            }
+          ]
+        },
+        'Barwani': {
+          name: 'Barwani',
+          temples: [
+            {
+              id: 14,
+              name: 'Rameshwar Temple, Rajghat',
+              district: 'Barwani',
+              image: 'https://source.unsplash.com/random/600x400/?shiva,river',
+              history: 'Picturesque riverside temple established by local rulers as a spiritual retreat.',
+              significance: 'Known for its peaceful setting and beautiful sunsets over the Narmada.',
+              architecture: 'Simple stone structure blending with the natural surroundings.',
+              builtBy: 'Local Rajput rulers',
+              mapLink: 'https://goo.gl/maps/XYZ136'
+            }
+          ]
+        },
+        'Alirajpur': {
+          name: 'Alirajpur',
+          temples: [
+            {
+              id: 15,
+              name: 'Katthiwara Mahadev Temple',
+              district: 'Alirajpur',
+              image: 'https://source.unsplash.com/random/600x400/?village,temple',
+              history: 'Ancient rural Shiva temple serving tribal communities for generations.',
+              significance: 'Important local pilgrimage site where traditional tribal rituals are performed.',
+              architecture: 'Simple structure reflecting local tribal building techniques.',
+              builtBy: 'Bhiltribal communities',
+              mapLink: 'https://goo.gl/maps/XYZ137'
+            }
+          ]
+        }
+      }
+    },
+    gujrat: {
+      districts: {
+        'all': {
+          name: 'All Districts',
+          temples: [
+            {
+              id: 16,
+              name: 'Nilkanth Dham Swaminarayan Temple, Poicha',
+              district: 'Narmada',
+              image: 'https://source.unsplash.com/random/600x400/?swaminarayan,temple',
+              history: 'Grand modern temple complex built by the Bochasanwasi Akshar Purushottam Swaminarayan Sanstha (BAPS) in 2004.',
+              significance: 'Important spiritual center showcasing Swaminarayan tradition with beautiful riverside setting.',
+              architecture: 'Traditional Hindu temple architecture with modern amenities and intricate carvings.',
+              builtBy: 'BAPS Swaminarayan Sanstha',
+              mapLink: 'https://goo.gl/maps/XYZ138'
+            },
+            {
+              id: 17,
+              name: 'Bhrigu Rishi Temple',
+              district: 'Bharuch',
+              image: 'https://source.unsplash.com/random/600x400/?ancient,temple',
+              history: 'Ancient temple dedicated to sage Bhrigu, one of the seven great sages (Saptarishi) of Hindu mythology.',
+              significance: 'Believed to be where sage Bhrigu meditated, making it an important pilgrimage site for devotees.',
+              architecture: 'Simple yet elegant stone structure with traditional Gujarati influences.',
+              builtBy: 'Unknown ancient builders, renovated by local communities',
+              mapLink: 'https://goo.gl/maps/XYZ139'
+            }
+          ]
+        },
+        'Narmada': {
+          name: 'Narmada',
+          temples: [
+            {
+              id: 16,
+              name: 'Nilkanth Dham Swaminarayan Temple, Poicha',
+              district: 'Narmada',
+              image: 'https://source.unsplash.com/random/600x400/?swaminarayan,temple',
+              history: 'Grand modern temple complex built by the Bochasanwasi Akshar Purushottam Swaminarayan Sanstha (BAPS) in 2004.',
+              significance: 'Important spiritual center showcasing Swaminarayan tradition with beautiful riverside setting.',
+              architecture: 'Traditional Hindu temple architecture with modern amenities and intricate carvings.',
+              builtBy: 'BAPS Swaminarayan Sanstha',
+              mapLink: 'https://goo.gl/maps/XYZ138'
+            }
+          ]
+        },
+        'Bharuch': {
+          name: 'Bharuch',
+          temples: [
+            {
+              id: 17,
+              name: 'Bhrigu Rishi Temple',
+              district: 'Bharuch',
+              image: 'https://source.unsplash.com/random/600x400/?ancient,temple',
+              history: 'Ancient temple dedicated to sage Bhrigu, one of the seven great sages (Saptarishi) of Hindu mythology.',
+              significance: 'Believed to be where sage Bhrigu meditated, making it an important pilgrimage site for devotees.',
+              architecture: 'Simple yet elegant stone structure with traditional Gujarati influences.',
+              builtBy: 'Unknown ancient builders, renovated by local communities',
+              mapLink: 'https://goo.gl/maps/XYZ139'
+            }
+          ]
+        }
+      }
+    }
+  };
+
+export default templesData;
