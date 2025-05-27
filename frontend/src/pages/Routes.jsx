@@ -5,7 +5,7 @@ import { WiDaySunny, WiRain, WiCloudy } from "weather-icons-react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import Npmap from '../assets/Npmap.jpg';
-import amarkantak from '../assets/amarkantak.jpg';
+import amarkantak from '../assets/amarkantak.avif';
 const Route = () => {
   const mapRef = useRef(null);
   const [activePlace, setActivePlace] = useState(null);
