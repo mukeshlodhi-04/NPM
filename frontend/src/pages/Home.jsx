@@ -218,7 +218,7 @@ const Home = () => {
               Create Account
             </Link>
             <Link 
-              to="/explore" 
+              to="/about" 
               className="bg-transparent hover:bg-blue-800 border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-medium transition duration-300"
             >
               Explore Without Account
@@ -240,16 +240,14 @@ const Home = () => {
             <h4 className="font-medium mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li><Link to="/about" className="text-gray-400 hover:text-white transition">About</Link></li>
-              <li><Link to="/journey" className="text-gray-400 hover:text-white transition">The Journey</Link></li>
+              <li><Link to="/route" className="text-gray-400 hover:text-white transition">The Journey</Link></li>
               <li><Link to="/temples" className="text-gray-400 hover:text-white transition">Sacred Temples</Link></li>
-              <li><Link to="/ecology" className="text-gray-400 hover:text-white transition">River Ecology</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="font-medium mb-4">Resources</h4>
             <ul className="space-y-2">
               <li><Link to="/blog" className="text-gray-400 hover:text-white transition">Travel Blog</Link></li>
-              <li><Link to="/guides" className="text-gray-400 hover:text-white transition">Pilgrim Guides</Link></li>
               <li><Link to="/faq" className="text-gray-400 hover:text-white transition">FAQ</Link></li>
             </ul>
           </div>
@@ -257,8 +255,8 @@ const Home = () => {
             <h4 className="font-medium mb-4">Contact</h4>
             <address className="text-gray-400 not-italic">
               <p>Narmada Yatra Project</p>
-              <p>contact@narmadayatra.org</p>
-              <p>+91 98765 43210</p>
+              <p>lodhimukesh63@gmail.com</p>
+              <p>+91 8819904733</p>
             </address>
           </div>
         </div>

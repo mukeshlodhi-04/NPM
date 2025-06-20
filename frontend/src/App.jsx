@@ -8,6 +8,7 @@ import RoutePage from './pages/Routes';
 import Temples from './pages/Temples';
 import Blogs from './pages/Blogs';
 import BlogDetail from './pages/BlogDetail'; // Import the new BlogDetail component
+import Faq from './pages/Faq'
 import Login from './pages/Login';
 import Register from './pages/Register';
 
@@ -21,7 +22,8 @@ const App = () => {
         <Route path="/route" element={<RoutePage />} />
         <Route path="/temples" element={<Temples />} />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="/blog/:id" element={<BlogDetail />} /> {/* Add this new route */}
+        <Route path="/blog/:id" element={<BlogDetail />} /> 
+        <Route path="/faq" element={<Faq/>}/>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>
