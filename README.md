@@ -43,9 +43,18 @@ GitHub Repository: [https://github.com/mukeshlodhi-04/NPM](https://github.com/mu
 
 ## 📸 Screenshots
 
-> *(Include images here using Markdown if available)*  
-> Example:
-> `![Homepage](screenshots/homepage.png)`
+## 📸 Screenshots
+
+### 🏠 Homepage
+
+![Homepage](screenshots/homepage.png)
+
+---
+
+### ℹ️ About Page
+
+![About Page](screenshots/about.png)
+
 
 ## 📦 Installation
 
