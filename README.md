@@ -47,13 +47,13 @@ GitHub Repository: [https://github.com/mukeshlodhi-04/NPM](https://github.com/mu
 
 ### 🏠 Homepage
 
-![Homepage](screenshots/homepage.png)
+![Homepage](homepage.png)
 
 ---
 
 ### ℹ️ About Page
 
-![About Page](screenshots/about.png)
+![About Page](about.png)
 
 
 ## 📦 Installation
